@@ -1614,8 +1614,8 @@ hr {
   }
 
   .row.g-4 {
-    gap: var(--space-md);
-  }
+
+}
 
   .col-12 {
     margin-bottom: var(--space-md);
@@ -1657,5 +1657,11 @@ hr {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .g-4 {
+    gap: var(--space-md);
   }
 }

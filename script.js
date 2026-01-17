@@ -128,7 +128,7 @@
       link.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         if (!href || href === '#' || href === '#!') return;
-        const targetId = href.replace(/^#/?/, '');
+        const targetId = href.replace(/^#/, '');
         if (!targetId) return;
         const target = document.getElementById(targetId);
         if (target) {
@@ -332,7 +332,7 @@
     if (counters.length === 0) return;
 
     counters.forEach((counter) => {
-      const target = parseInt(counter.textContent.replace(/D/g, ''), 10);
+      const target = parseInt(counter.textContent.replace(/\D/g, ''), 10);
       if (isNaN(target)) return;
 
       counter.textContent = '0';
